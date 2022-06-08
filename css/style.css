@@ -7,68 +7,39 @@
     --bg: #151515;
     --fg: #E8E3E3;
     --pr: #848379;
-    --al: #63625B;
+    --sec: #63625B;
+    --ter: #b4827c;
 }
 
 * {
-    font-family: Font;
-    text-align: left;
-    text-decoration: none;
-    color: var(--fg);
-    margin: 0;
     transition: ease 1s;
-    border: none;
+    color: var(--fg)
 }
 
-body, div {
-    display: grid;
+a {
+    text-decoration: none;
 }
 
 body {
+    background: var(--bg);
+    font-family: Font, monospace;
     margin: 2em;
-    min-height: 90vh;
-    background-color: var(--bg);
-    grid-template-columns: 2fr 3fr;
-}
-
-div {
-    grid-gap: 1em;
-    align-content: center;
-    width: 80%;
-}
-
-img {
-    border-radius: 100%;
-    align-self: center;
-    justify-self: center;
-    height: 20em;
-}
-
-h1, h2, a {
-    color: var(--pr);
 }
 
 button {
     border-radius: 100%;
-    position: absolute;
-    align-self: top;
-    justify-self: right;
+    border: none;
     padding: 1em;
-    background-color: var(--al);
+    background-color: var(--sec);
 }
 
 button:hover {
     background-color: var(--pr);
 }
 
-@media only screen and (max-width: 1000px) {
-    body {
-        grid-template-columns: 1fr;
-    }
-
-    img {
-        display: none;
-    }
+.pfp {
+    max-height: 400px;
+    padding: 1em 3em 3em;
 }
 
 .cursor {
@@ -83,15 +54,30 @@ button:hover {
     }
 
     50% {
-        color: #b4827c;
+        color: var(--ter);
     }
 }
 
 .folder {
-    color: #b4827c;
+    color: var(--ter);
 }
 
 a:hover {
-    color: #b4827c;
-    background-color: rgb(42, 42, 42)
+    color: var(--ter);
+    background-color: rgb(42, 42, 42);
+    transition: 0.3s;
+}
+
+h1, h2, a {
+    color: var(--pr);
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+@media (min-width: 992px) {
+    .hero {
+        margin-top: 5em;
+    }
 }
