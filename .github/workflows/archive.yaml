@@ -1,0 +1,8 @@
+on:
+  push:
+jobs:
+  archive:
+    name: Wayback Machine
+    uses: JamieMagee/wayback@v1.3.19
+    with:
+      url: spsharan.com
